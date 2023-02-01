@@ -1,5 +1,5 @@
 <div align="center">
-<img  width="170px" src="/Tic_tac_toe.svg.png" alt="logomarca" >
+<img  width="170px" src="/Tic_tac_toe.svg.png.png" alt="logomarca" >
 </div>
 
 <h1 align="center" font-size="20px">TIC-TAC-TOE</h1>
@@ -12,7 +12,7 @@
 <h1 align="center" > :hammer: Operation of the project </h1>
 
 <p align="center" >
-<img  width="500px" src="/tic-tac-function.jpg" alt="modelo" >
+<img  width="500px" src="/tic-tac-function.png" alt="modelo" >
 </p>
 
 
