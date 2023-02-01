@@ -17,7 +17,7 @@
 
 
 <div align="center">
-<a href="https://lorenagrazy.github.io/Tic-Tac-Toe">⚙️See how it works</
+<a href="https://lorenagrazy.github.io/Tic-Tac-Toe/">⚙️See how it works</
 <div/>  
   
 <br>
