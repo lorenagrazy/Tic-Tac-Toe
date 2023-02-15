@@ -1,6 +1,4 @@
-<div align="center">
-<img  width="170px" src="/Tic_tac_toe.svg.png.png" alt="logomarca" >
-</div>
+
 
 <h1 align="center" font-size="20px">TIC-TAC-TOE</h1>
 
