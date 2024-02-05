@@ -1,46 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let squares = document.querySelectorAll('.square');
 
-    let squares = document.querySelectorAll(".square");
-
-    squares.forEach((square) => {
-        square.addEventListener('click', handleClick);
-    })
-
-})
+  squares.forEach((square) => {
+    square.addEventListener('click', handleClick);
+  });
+});
 
 function handleClick(event) {
+  let square = event.target;
+  let position = square.id;
 
-
-    let square = event.target;
-    let postion = square.id;
-
-    if (handleMove(postion)) {
-
-        setTimeout(() => {
-            alert(" O Jogo Acabou - O Vencedor foi " + playerTime);
-        }, 10);
-
-    };
-    updateSquare(postion);
+  if (handleMove(position)) {
+    setTimeout(() => {
+      alert('Game Over - The Winner is ' + playerTime);
+      askForRestart();
+    }, 10);
+  } else if (isBoardFull()) {
+    setTimeout(() => {
+      alert("Game Over - It's a Draw!");
+      askForRestart();
+    }, 10);
+  }
+  updateSquare(position);
 }
 
-function updateSquare(postion) {
-    let square = document.getElementById(postion.toString());
-    let symbol = board[postion];
-    square.innerHTML = `<div class='${symbol}'></div>`
+function updateSquare(position) {
+  let square = document.getElementById(position.toString());
+  let symbol = board[position];
+  square.innerHTML = `<div class='${symbol}'></div>`;
 }
 
 function updateSquares() {
+  let squares = document.querySelectorAll('.square');
 
-    let squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+    let position = square.id;
+    let symbol = board[position];
 
-    squares.forEach((square) => {
-        let postion = square.id;
-        let symbol = board[postion];
+    if (symbol != '') {
+      square.innerHTML = `<div class='${symbol}'></div>`;
+    }
+  });
+}
 
-        if (symbol != '') {
-            square.innerHTML = `<div class='${symbol}'></div>`
-        }
-    })
+function askForRestart() {
+  if (confirm('Do you want to play again?')) {
+    resetGame();
+    location.reload();
+  }
+}
 
+function resetGame() {
+  board = ['', '', '', '', '', '', '', '', ''];
+  playerTime = 0;
+  gameOver = false;
+  updateSquares();
+}
+
+function isBoardFull() {
+  return board.every((cell) => cell !== '');
 }

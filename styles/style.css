@@ -1,44 +1,70 @@
-body{
-    text-align: center;
-
-}
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.square{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(248, 248, 185);
-    border: 1px solid black;
-    display: inline-block;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.o{
-    position: relative;
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 60px;
 }
 
-.o:after{
-    position: absolute;
-    content: "\1F987";
-    font-size: 50px;
-    line-height: 100px;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-}
-.x{
-    position: relative;
+.stage {
+  display: flex;
+  flex-direction: column;
 }
 
-.x:after{
-    position: absolute;
-    content: "\1F383";
-    font-size: 50px;
-    line-height: 100px;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+.stage > div {
+  display: flex;
+}
+
+.square {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(248, 248, 185);
+  border: 1px solid black;
+  display: inline-block;
+  margin: 5px;
+}
+
+.o,
+.x {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.o:after,
+.x:after {
+  position: absolute;
+  font-size: 50px;
+  line-height: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.o:after {
+  content: '\1F987';
+}
+
+.x:after {
+  content: '\1F383';
+}
+
+@media only screen and (max-width: 450px) {
+  .square {
+    width: 80px;
+    height: 80px;
+  }
+
+  .o:after,
+  .x:after {
+    font-size: 30px;
+  }
 }
