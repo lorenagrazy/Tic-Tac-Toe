@@ -7,7 +7,7 @@
 </div>
 <br>
 
-<h1 align="center" > :hammer: Operation of the project </h1>
+<h1 align="center" > :gear: Operation of the project </h1>
 
 <p align="center" >
 <img  width="500px" src="/tic-tac-function.png" alt="modelo" >
