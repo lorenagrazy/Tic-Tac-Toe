@@ -33,27 +33,35 @@ h1 {
   margin: 5px;
 }
 
-.o,
-.x {
+
+.pumpkin {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 80%; 
 }
+ .bat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80%; 
+ }
 
-.o:after,
-.x:after {
+.bat:after,
+.pumpkin:after {
   position: absolute;
   font-size: 50px;
   line-height: 100px;
   transform: translate(-50%, -50%);
 }
 
-.o:after {
+.bat:after {
   content: '\1F987';
 }
 
-.x:after {
+.pumpkin:after {
   content: '\1F383';
 }
 
@@ -63,8 +71,8 @@ h1 {
     height: 80px;
   }
 
-  .o:after,
-  .x:after {
+  .bat:after,
+  .pumpkin:after {
     font-size: 30px;
   }
 }

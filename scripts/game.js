@@ -1,6 +1,6 @@
 let board = ['', '', '', '', '', '', '', '', ''];
 let playerTime = 0;
-let symbols = ['o', 'x'];
+let symbols = ['bat', 'pumpkin'];
 let gameOver = false;
 
 let winStates = [
